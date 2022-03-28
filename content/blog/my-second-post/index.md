@@ -4,6 +4,8 @@ date: 2022-03-28T21:36:52.731Z
 description: Concerto Sabato 2 aprile 2022 – ore 20,30 presso FORMIA CHIESA DI
   S. TERESA D’AVILA
 ---
+![](locandina_dimitri.jpeg)
+
 Il Comune di Formia in collaborazione con l’Associazione Jazzflirt propone il concerto del duo Dimitri Grechi Espinoza e Paolo “Pee Wee” Durante, che proporrà melodie gospel. Il concerto si terrà ***Sabato 2 aprile alle ore 20,30 presso la Chiesa di S. Teresa d’Avila in Formia, piazza G. Marconi.***
 
 **Il Jazz consente incontri come quello fra Dimitri Grechi Espinoza al sax tenore, dal linguaggio lirico e sintetico, e Paolo “Pee Wee” Durante all’Organo Hammond, che unisce all’estremo virtuosismo un tocco molto raffinato.**
