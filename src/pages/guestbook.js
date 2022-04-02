@@ -7,7 +7,8 @@ import Layout from "../components/layout"
 const GuestbookStyle = styled.div`
   display: grid;
   grid-template-columns: 0.7fr 6fr 2fr 0.7fr;
-  margin-top: 4rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
 
   .wrap {
     grid-column: 2/3;

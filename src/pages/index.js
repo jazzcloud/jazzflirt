@@ -20,7 +20,7 @@ const HorizontalScrolling = styled.div`
     color: var(--orange);
     text-transform: uppercase;
     display: inline-block;
-    animation: text 15s linear infinite;
+    animation: text 13s linear infinite;
     white-space: nowrap;
     grid-row: 1/2;
     &:hover {
@@ -30,41 +30,46 @@ const HorizontalScrolling = styled.div`
   }
 
   @keyframes text {
-  0% {
-    margin-left: 100%;
-    transform: translateX(0%);
-  }
-  100% {
-    margin-left: 0;
-    transform: translateX(-100%);
-  }
-}
-  }
-
-  .delayed {
-    
-    display: inline-block;
-    animation: delayed 6s linear infinite;
-    white-space: nowrap;
-    grid-row: 1/2;
-    
-  }
-
-  @keyframes delayed {
     0% {
+      margin-left: 100%;
       transform: translateX(0%);
     }
     100% {
+      margin-left: 0;
       transform: translateX(-100%);
     }
   }
-
+}
 `;
 
 const WrapStyles = styled.div`
   display: grid;
   grid-template-columns: 0.7fr 8fr 0.7fr;
-
+  h1 {
+    grid-column: 2/3;
+    margin-bottom: 0;
+    margin-top: 2rem;
+    color: var(--orange);
+  }
+  .leggidipiu {
+    grid-column: 2/3;
+    margin-bottom: 2rem;
+    &:hover {
+      transition-timing-function: ease-in;
+      transition: 0.2s;
+      transform: translateX(2rem);
+      color: var(--orange);
+    }
+  }
+  ol {
+    list-style: none;
+    max-width: 50em;
+    grid-column: 2/3; 
+    justify-self: start;
+    padding-left: 0px; 
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
   .post-list-item {
     &:hover {
       transition-timing-function: ease-in;
@@ -155,18 +160,17 @@ const BlogIndex = ({ data, location }) => {
       }
       
       
-     
       <WrapStyles>
-      <ol style={{ listStyle: `none`, maxWidth: `50em`, gridColumn: `2/3`,  justifySelf: `start`, paddingLeft: `0px`, marginTop: `3rem`, marginBottom: `3rem`}}>
+      <h1>Blog</h1>
+      <ol>
         {posts.map(post => {
           const title = post.frontmatter.title || post.fields.slug
-
+          
           return (
+            
             <li key={post.fields.slug}>
               <article
                 className="post-list-item"
-                itemScope
-                itemType="http://schema.org/Article"
               >
                 <Link to={post.fields.slug} itemProp="url">
                   <small>{post.frontmatter.date}</small>
@@ -189,6 +193,7 @@ const BlogIndex = ({ data, location }) => {
           )
         })}
       </ol>
+      <Link className="leggidipiu" to="/blog">Leggi di più</Link>
       </WrapStyles>
       <WrapSoci>
         <h2 className="textLeft">Diventa nostro socio</h2>
@@ -210,7 +215,7 @@ export const pageQuery = graphql`
     }
     blog: allMarkdownRemark (
       filter: {fileAbsolutePath: {regex: "/blog/"}}
-      limit: 3
+      limit: 5
       sort: { fields: [frontmatter___date], order: DESC }) {
       nodes {
         excerpt

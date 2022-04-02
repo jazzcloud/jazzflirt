@@ -5,11 +5,19 @@ import styled from "styled-components"
 import Seo from "../components/seo"
 
 const ArticleStyle = styled.div`
+  margin: 0 auto;
+  max-width: 35em;
+  padding: 2em 1em 5em;
+  position: relative;
+  overflow-wrap: break-word; 
+
   h1, h2, h3, h4, h5, h6 {
     font-weight: 800;
     color: var(--orange);
   }
-
+  h1 {
+    margin-top: 1rem;
+  }
   ol {
     padding-left: 2rem;
   }
@@ -17,9 +25,20 @@ const ArticleStyle = styled.div`
     text-decoration: underline;
     &:hover {
       color: var(--orange);
-      font-weight: 500;
+    }
   }
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
   }
+
+  .blogPostNav {
+    margin-bottom: 3rem;
+  }
+}
 `;
 
 
@@ -34,20 +53,9 @@ const BlogPostTemplate = ({ data, location }) => {
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
       />
-      <ArticleStyle
-        className="BlogPost"
-        itemScope
-        itemType="http://schema.org/Article"
-        style={{ 
-          margin: `0 auto`,
-          maxWidth: `35em`,
-          padding: `2em 1em 5em`,
-          position: `relative`,
-          overflowWrap: `break-word`, 
-           }}
-      > 
+      <ArticleStyle> 
         <header>
-          <p>{post.frontmatter.date}</p>
+          <small>{post.frontmatter.date}</small>
           <h1 itemProp="headline">{post.frontmatter.title}</h1>
         </header>
         <section
@@ -55,17 +63,9 @@ const BlogPostTemplate = ({ data, location }) => {
           itemProp="articleBody"
         />
         <hr />
-        <nav className="blogPostNav">
-        <ul
-          style={{
-            display: `flex`,
-            flexWrap: `wrap`,
-            justifyContent: `space-between`,
-            listStyle: `none`,
-            padding: 0,
-          }}
-        >
-          <li>
+        <nav>
+        <ul>
+          <li className="blogPostNav">
             {previous && (
               <Link to={previous.fields.slug} rel="prev">
                 ← {previous.frontmatter.title}

@@ -125,10 +125,10 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `Jazzflirt - Musica & altri amori`,
+        short_name: `Jazzflirt`,
         start_url: `/`,
-        background_color: `#ffffff`,
+        background_color: `hsla(27, 23%, 92%, 1)`,
         // This will impact how browsers show your PWA/website
         // https://css-tricks.com/meta-theme-color-and-trickery/
         // theme_color: `#663399`,

@@ -109,12 +109,11 @@ export default function Footer() {
             <li>© {new Date().getFullYear()} - Jazzflirt - Musica & altri Amori Via della Torre, 6 04023 Formia (LT) </li>
             <li>Associazione di promozione sociale nel Registro delle Associazioni della Regione Lazio con determina N.D2550 10/06/2005 
             - C.F. 90036040591 – P.I. 02234320592 </li>
-            <li className="Policies">
-            <Link to="/">Statuto</Link>
-                <Link to="/">Privacy Policy</Link>
-                <Link to="/">Cookie Policy</Link>
+
+            <li>
+                <div className="line"></div>
             </li>
-            <li><div className="line"></div></li>
+            
             <li>
                 <a className="credits" 
                 href="https://www.instagram.com/bisabi_design/" 
@@ -138,23 +137,25 @@ export default function Footer() {
                     rel="noopener noreferrer"><img src={ig} 
                     alt="Profilo Instagram" 
                     width="24" height="24" />
-                    </a>
-                    
+                    </a>    
                 </li>
+
                 <li class="links">
                     <Link to="/chisiamo">Chi siamo</Link>
                 </li>
+
                 <li class="links">
                     <Link to="/blog">Blog</Link>
                 </li>
+
                 <li class="links">
                     <Link to="/guestbook">Guestbook</Link>
                 </li>
+
                 <li class="links">
                     <Link to="/contatti">Contatti</Link>
-                </li>
+                </li> 
 
-                
             </ul>
 
             <ul className='mobileUtilities'>
@@ -174,9 +175,9 @@ export default function Footer() {
                 </li>  
                 <li class="links">
                     <Link to="/chisiamo">Chi siamo</Link>
-                    <Link to="/chisiamo">Blog</Link>
-                    <Link to="/chisiamo">Guestbook</Link>
-                    <Link to="/chisiamo">Contatti</Link>   
+                    <Link to="/blog">Blog</Link>
+                    <Link to="/guestbook">Guestbook</Link>
+                    <Link to="/contatti">Contatti</Link>   
                 </li>      
             </ul>
         

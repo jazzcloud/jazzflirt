@@ -39,29 +39,28 @@ a {
         margin-left: -5px;
     }
     .links  {
-        grid-column: 3/5;
-        margin: 15px;
+        grid-column: 3/4;
         padding-left: 11px;
-        justify-self: start;
+        justify-self: center;
     }
 
-    @media (max-width: 1130px) {
+    @media (max-width: 1170px) {
         .links  {
-            grid-column: 3/6;
+            grid-column: 3/5;
         }
         a {
             margin-right: 2rem;
         }
     }
       
-    @media (max-width: 860px){   
+    @media (max-width: 800px){   
         .links  {
             display: none;
         }
 `;
 
 const MenuIcon = styled.div`
-    @media (max-width: 860px){
+    @media (max-width: 800px){
         grid-column: 4/5;
         justify-self: end;
         border: none;
@@ -154,9 +153,6 @@ export default function Nav() {
                     </li>
                     <li>
                         <Link to="/contatti" activeClassName="active">Contatti</Link>
-                    </li>
-                    <li>
-                        <Link to="/associazione" activeClassName="active">Diventa socio</Link>
                     </li>
                 </ul>
             </MenuLinks>

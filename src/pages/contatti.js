@@ -56,6 +56,7 @@ const FormStyles = styled.form`
     /* Match form field borders */
     border: 1px solid #999;
     margin-bottom: 0.3em;
+    margin-top: 0.3em;
     background : none;
   }
 
@@ -96,7 +97,8 @@ const FormStyles = styled.form`
     margin-bottom: 1em;
   }
 
-  a:hover {
+  a {
+    text-decoration: underline;
     color: var(--orange);
   }
 
@@ -140,7 +142,10 @@ const BlogIndex = ({ data, location }) => {
 
         
       <FormStyles>
-      <form name="contact" method="POST" data-netlify="true"></form>
+      <form method="post" netlify-honeypot="bot-field" data-netlify="true" name="contact">
+        <input type="hidden" name="bot-field" />
+        <input type="hidden" name="form-name" value="contact" />
+      </form>
           
       <ul>
         <h2>Contattaci</h2>
@@ -156,38 +161,26 @@ const BlogIndex = ({ data, location }) => {
           <label>
             Email
             <input type="email" name="email" />
-          </label> 
-          
+          </label>  
         </li>
-      
       
         <li>
           <label>
             Messaggio
             <textarea id="msg" name="user_message"></textarea>
-            </label> 
-          
+            </label>  
         </li>
         <button type="submit">Invia</button>
       
       </ul>
 
       <ul className="addresses">
-      <li><a href = "mailto: info@jazzflirt.net">info@jazzflirt.net</a></li>
-      <li><a href="tel:+39-339-576-9745">339-576-9745</a></li>
-      <li><a href="tel:+39-338-692-4358">338-692-4358</a></li>
-      <li><a href="tel:+39-338-692-4358">335-704-9918</a></li>
-      <li>Jazzflirt - Musica & altri Amori Via della Torre, 6 04023 Formia (LT) </li>
-
-     
-
-
+        <li><a href = "mailto: info@jazzflirt.net">info@jazzflirt.net</a></li>
+        <li><a href="tel:+39-324-545-1814">324-545-1814</a></li>
+        <li><a href="tel:+39-338-692-4358">338-692-4358</a></li>
+        <li><a href="tel:+39-335-704-9918">335-704-9918</a></li>
+        <li>Jazzflirt - Musica & altri Amori Via della Torre, 6 04023 Formia (LT) </li>
       </ul>
-      
-
-      
-    
-
       </FormStyles>
       
     </Layout>
