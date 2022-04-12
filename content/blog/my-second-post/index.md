@@ -25,3 +25,5 @@ Il Comune di Formia in collaborazione con l’Associazione Jazzflirt propone il 
 **sito web: www.jazzflirt.net**
 
 **e-mail: [info@jazzflirt.net](mailto:info@jazzflirt.net)**
+
+[pdf](static/img/statuto.pdf)
