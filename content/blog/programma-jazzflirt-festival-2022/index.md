@@ -1,5 +1,5 @@
 ---
-title: Programma Jazzflirt festival 2022
+title: JAZZFLIRT FESTIVAL 2022
 date: 2022-06-26T18:03:35.334Z
 description: FORMIA “AREA ARCHEOLOGICA CAPOSELE” - Via Porticciolo Caposele
 ---
